@@ -190,7 +190,8 @@ We can observe that the bigrams such as `apple store` are mostly related to  dom
 Analyzing the most frequent words in positive tweet sentiments reveals interesting insights into customer sentiment toward Apple and Google products. For instance, words like `ipad and google` dominate positive sentiments towards Apple, indicating a strong appreciation for its
 On the other hand, positive tweets about Google frequently feature words like `google`  This analysis helps google and apple to understand the specific aspects that drive positive sentiment for each brand, enabling them to tailor marketing strategies and product recommendations accordingly. 
 
-![image](https://github.com/user-attachments/assets/eb05824c-f464-44fd-87b6-46a9f01713c9)
+![image](https://github.com/user-attachments/assets/bdcc943c-152b-4ef9-94d4-c8b62d89ce1a)
+
 
 **Observation**
 
