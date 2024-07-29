@@ -105,36 +105,37 @@ These statistics are useful for understanding the data distribution and identify
 
 **Steps to be followed**
 1. **Completeness**
- checking for missing values and handling them
 
- We dropped one null value from the 'tweet-text' column  
-
+ We checked for completeness of our data by checking for missing values in our data, we found one null value in the tweet_text column and 5370 in the emotion_in_tweet_is_directed_at column after careful 
+investigation we noticed it was an empty tweet which we decided to drop since it won’t affect our analysis but for the emotion in the tweet is directed at column we left them since we won’t be using it for  modeling or analysis
+ 
 2. **Consistency**  -
 
-checking for duplicate values and handling them
-  
-we dropped  duplicates because they appeared to be caused by  hashtags and the repetition of tweets
+Consistency in our data is very important hence we had to check for duplicate values in our data we found 22 records after investigating further in each column we found the duplicates were a result of the repetition of tweets hence we decided to drop them
 
 3. **Uniformity**
    
-we will rename our columns as well as clean our texts by removing punctuations capital letters, numbers, white spaces,@ symbols as well as  hashtags and change the "no emotions towards brand' emotion to 
-neutral emotion for  easy interpretability
+Viewing our column names we decided to change them into more simple names for ease of readability and interpretation i.e.; tweet text, emotion in the tweet is directed at, is there an emotion directed at a brand or product into tweets, product, and emotion respectively
+
+Second, we converted all no emotions towards brand values from the emotion column to neutral emotion for ease of interpretation
+
+Third, we did text cleaning by removing punctuations, white spaces, hashtags, symbols, and numbers as well as converting uppercase letters to lowercase to prepare our text date for preprocessing
 
 4. **Tokenizing**
   
-Tokenize our tweets these will enable the machine to process our text data
+We  performed tokenization  on our tweets this is a process of breaking down pieces of text, like sentences  into individual words or tokens these tokens help computers understand our text data and the process  by splitting it into manageable units
 
 5. **Removing of stop words**
 
-Removing  stopwords helps to shorten our texts for easy processing and modeling as well as removing irrelevant words that will affect our modeling
- 
+We removed stop words in build in nltk library as well  these additional words to our stop words; 'sxsw', 'mention', 'link', 'rt', 'app', 'android', 'sxswi', 'party', 'mobile', 'apps', 'downtown', 'maps', 'check', 'mayer', 'marissa', 'googles', 'us', 'pop', 'news',  'win', 'first', 'launch', 'panel', 'shop', 'booth', 'apples', 'itunes', 'ipads', 'blackberry', 'temp', 'designing', 'tv', 'fb', 'quotgoogle', 'uberguide', 'ubersocial', 'gsdm', 'interactive', 'flipboard', 'tapworthy', 'sampler', 'navigation', 'quotthe', 'qagb', 'foursquare', 'wifi', 'hootsuite', 'checkins'  these enables us to shorten our texts for easy processing and modeling as well as removing irrelevant words that might  affect our modeling
+
 6. **Normalization** -
 
-Through lemmatization so as to retain  most of the information and meaning of the words
+We normalized to reduce the words to their root form hence we chose lemmatization to retain most of the information and meaning of the words
    
 ### Feature engineering
 
-Adding a company_name column which enables us to view the different products mentioned in the tweets either there from Apple or Google
+We created a new feature company_name which enables us to view the different products mentioned in the tweets either there from Apple or Google which could be useful in the analysis of the better-loved brand
 
 ## EDA and Visualization
 #### Univarent analysis
