@@ -293,8 +293,8 @@ Deploy and constant evaluation of the Random Forest for binary classification an
 
 Conduct regular sentiment analysis to track brand perception changes.
 
-## My Repository breakdown
+## Repository breakdown
 
 The  project data is judge-1377884607_tweet_product_company  
 
-The nlp_project 2. ipynb contains the jupyter notebook for this project (here)[https://github.com/Geraldkigotho/NLP-tweet-sentiment-project/blob/main/nlp_project%202.ipynb]
+The nlp_project 2. ipynb contains the jupyter notebook for this project [here](https://github.com/Geraldkigotho/NLP-tweet-sentiment-project/blob/main/nlp_project%202.ipynb)
