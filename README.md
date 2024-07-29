@@ -23,7 +23,6 @@ Codel Electronics Company lacks comprehensive insights into consumer emotions an
 To develop predictive models to classify the sentiment (positive, negative, or neutral) expressed in tweets about brands and products.
 
 **SPECIFIC OBJECTIVES**
-To leverage Twitter data to manage and comprehend public opinion about Google and Apple products brands offered by Codel Electronics
 
 To identify the best-performing product, in terms of positive and negative
 
@@ -266,3 +265,36 @@ After tuning and evaluating the models, the following results were obtained:
 - **Precision and Recall**: Important for understanding the trade-off between the number of false positives and false negatives. Critical in applications where either false positives or false negatives carry a high cost.
 - **F1-Score**: Balances precision and recall, making it a suitable metric when we need to find a balance between the two.
 - **ROC AUC**: Measures the model's ability to distinguish between classes, providing a comprehensive view of model performance across different thresholds.
+
+## Conclusions
+Most of the sentiments show no emotion towards the brand
+
+The most mentioned product brand was Apple products
+
+The best brand in terms of positive emotion is Google
+
+The worst brand in terms of negative emotion is Apple
+
+The best Binary classification model is a Random forest classifier and in the multiclass is the Stacking classifier
+
+## Recommendations
+
+Develop strategies to convert neutral sentiments into positive ones.
+
+Create targeted campaigns to address specific issues in the negative sentiments.
+
+Analyze why Apple products dominate mentions and benchmark against Apple.
+
+Stock Google products.
+
+Investigate negative sentiments toward Apple to discover where the issue is.
+
+Deploy and constant evaluation of the Random Forest for binary classification and Stacking Classifier for multiclass problems; continuously as well as regular refining the models
+
+Conduct regular sentiment analysis to track brand perception changes.
+
+## My Repository breakdown
+
+The  project data is judge-1377884607_tweet_product_company  
+
+The nlp_project 2. ipynb contains the jupyter notebook for this project (here)[https://github.com/Geraldkigotho/NLP-tweet-sentiment-project/blob/main/nlp_project%202.ipynb]
