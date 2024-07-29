@@ -289,9 +289,13 @@ Stock Google products.
 
 Investigate negative sentiments toward Apple to discover where the issue is.
 
-Deploy and constant evaluation of the Random Forest for binary classification and Stacking Classifier for multiclass problems; continuously as well as regular refining the models
+Deployment and constant evaluation of the Random Forest for binary classification and Stacking Classifier for multiclass problems; continuously as well as regular refining the models
 
 Conduct regular sentiment analysis to track brand perception changes.
+
+## Deployment of the stacking classifier
+
+Using streamlit we were able to deploy our model here is the [link](https://testapp-2oycxwq2pw59kqtcbtxaeg.streamlit.app/)
 
 ## Repository breakdown
 
