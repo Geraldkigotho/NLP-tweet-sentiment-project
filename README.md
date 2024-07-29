@@ -5,53 +5,54 @@
 
 ### BUSINESS OVERVIEW:
 
-Brand and Product Emotions refer to the feelings and attitudes that consumers express towards specific brands and their products. These emotions, which can be positive, negative, or neutral, are influenced by factors such as personal experiences, marketing efforts, product quality, and social trends. . We can offer useful insights for enhancing customer satisfaction and brand reputation by categorising the emotions conveyed in tweets and identifying the targeted brands or items.
-Social media sentiment has a big influence on how consumers perceive brands and behave. Negative attitudes can cause reputational harm and consumer attrition, while positive sentiments can increase brand loyalty and draw in new clients. As a result, it is critical for Codel Electronics Company marketing department to track and evaluate public opinion in order to proactively fix problems and capitalise on favourable comments for advertising.
+Brand and Product Emotions refer to the feelings and attitudes that consumers express towards specific brands and their products. These emotions, which can be positive, negative, or neutral, are influenced by factors such as personal experiences, marketing efforts, product quality, and social trends. We can offer useful insights for enhancing customer satisfaction and brand reputation by categorizing the emotions conveyed in tweets and identifying the targeted brands or items. Social media sentiment has a big influence on how consumers perceive brands and behave. Negative attitudes can cause reputational harm and consumer attrition, while positive sentiments can increase brand loyalty and draw in new clients. As a result, Codel Electronics Company's marketing department must track and evaluate public opinion to proactively fix problems and capitalize on favorable comments for advertising
+
+### Stakeholder
+
+Codel Electronics brand Manager who is responsible for overseeing the brand's image and reputation, ensuring it aligns with the company's values and market goals
+
 
 ###  PROBLEM STATEMENT
 
-Analyzing Twitter sentiment to understand consumer emotions towards Apple and Google products, identify areas for improvement, and enhance market strategies to comprehend public opinion about products and brands offered by Jumia Kenya.
+Codel Electronics Company lacks comprehensive insights into consumer emotions and public opinion towards its products and brands. This hinders their ability to identify areas for improvement, enhance customer satisfaction, and develop effective market strategies. A systematic approach to analyzing Twitter sentiment is needed to gain actionable insights and stay competitive.
 
 ### OBJECTIVES:
 
 **MAIN OBJECTIVE**
-To develop a predictive models to classify the sentiment (positive, negative, or neutral) expressed in tweets about brands and products.
+
+To develop predictive models to classify the sentiment (positive, negative, or neutral) expressed in tweets about brands and products.
 
 **SPECIFIC OBJECTIVES**
+To leverage Twitter data to manage and comprehend public opinion about Google and Apple products brands offered by Codel Electronics
 
-- leverage Twitter data to manage and comprehend public opinion about products and brands offered by Codel Electronics
- 
-- To identify the best performing product, in terms of emotion, positive or negative
- 
-- Understanding sentiment (emotion) distribution - Analyze the distribution of sentiments across different brands and products to provide a comprehensive overview of public perception.
-  
-- Providing Actionable Insights - Develop actionable insights and recommendations for brands to address negative sentiments
+To identify the best-performing product, in terms of positive and negative
+
+To understand sentiment (emotion) distribution regarding Apple and Google brand
+
+To provide actionable insights from analyzing Twitter sentiments
 
 ### SUCCESS CRITERIA
 
-Goal: Achieve a high accuracy rate, ideally above 75%  
+Goal: Creating a multiclass machine learning mode with an accuracy of more than 75% and a f1_score of more than 70%
 
-### STAKEHOLDER
-
-Jumia brand Manager
 
 ### CONSTRAINTS
 
-. High computational needs required when tuning and optimizing our models
+. High computational needs are required when tuning and optimizing our models
 
-. Quality of data -Target variable class imbalance
+. Quality of data -The Target variable has a huge class imbalance
 
   ## Data Understanding
 
- The dataset comes from CrowdFlower via data.world [Source](https://data.world/crowdflower/brands-and-product-emotions), It contain  3 columns with over 9000 tweets of people  sentiments about google and apple products on twitter which were classified as either positive, negative, no emotions or .i can't tell
+ The dataset comes from CrowdFlower via data. world [Source](https://data.world/crowdflower/brands-and-product-emotions), It contains  3 columns with over 9000 tweets of people's  sentiments about Google and Apple products on Twitter which were classified as either positive, negative, no emotions, or. I can't tell
 
 
 #### Features(columns)
-1. **Tweet_text (Categorical)**: The text of the tweet. This feature contains the actual tweet content posted by users ,it's also our predictor variable
+1. **Tweet_text (Categorical)**: The text of the tweet. This feature contains the actual tweet content posted by users, it's also our predictor variable
    
 2. **Emotion_in_tweet_is_directed_at (Categorical)**: The brand or product that the emotion in the tweet is directed at. This feature identifies which brand or product is the target of the emotion expressed in the tweet.
    
-3. **Is_there_an_emotion_directed_at_a_brand_or_product (Categorical)**: Indicates whether there is an emotion directed at a brand or product. The possible values include "Positive emotion", "Negative emotion", and "No emotion toward brand or product", its also our target variable
+3. **Is_there_an_emotion_directed_at_a_brand_or_product (Categorical)**: Indicates whether there is an emotion directed at a brand or product. The possible values include "Positive emotion", "Negative emotion", and "No emotion toward brand or product", which is also our target variable
 
 ### Data Importation and Inspection
 
@@ -112,7 +113,7 @@ These statistics are useful for understanding the data distribution and identify
 
 checking for duplicate values and handling them
   
-we dropped  duplicates because they appeared to be caused by  hashtags and repetition of tweets
+we dropped  duplicates because they appeared to be caused by  hashtags and the repetition of tweets
 
 3. **Uniformity**
    
@@ -144,7 +145,7 @@ Adding a company_name column which enables us to view the different products men
 
 **Observation**
 
-- The most frequently occurring emotion is `Neutral emotion`, with a count of  more than 5000, followed by positive emotion with more than 2500 counts, then negative emotions with more than 500 counts and finally I can't tell with below 200 counts.
+- The most frequently occurring emotion is `Neutral emotion`, with a count of  more than 5000, followed by positive emotion with more than 2500 counts. Negative emotions with more than 500 counts and finally I can't tell with below 200 counts.
 
 - There is a noticeable disparity between the counts of No emotion toward brand or product (5338) and the other emotions, with Positive emotion being the next most frequent at 2527, and Negative emotion at 570.
 
@@ -179,7 +180,7 @@ The histogram shows that the average word length in these tweets is  5 words, wi
 
 **Observation**
 
-We can observe that the bigrams such as `apple store` are mostly related to  dominating the Google and Apple products tweets. The presence of bigrams such as "rt mention" dominating the dataset suggests that many tweets are retweets or mentions, which are typically used to highlight trending topics, news, and user opinions. This can imply that discussions about Apple and Google products are significantly influenced by social sharing and user interactions on the platform
+We can observe that the bigrams such as `Apple store` are mostly related to  dominating the Google and Apple products tweets. Bigrams such as "rt mention" dominating the dataset suggest that many tweets are retweets or mentions, typically used to highlight trending topics, news, and user opinions. This can imply that discussions about Apple and Google products are significantly influenced by social sharing and user interactions on the platform
 
 **A bar plot showing the top positive and negative sentiments**
 
@@ -187,8 +188,8 @@ We can observe that the bigrams such as `apple store` are mostly related to  dom
 
  **Observation**
 
-Analyzing the most frequent words in positive tweet sentiments reveals interesting insights into customer sentiment toward Apple and Google products. For instance, words like `ipad and google` dominate positive sentiments towards Apple, indicating a strong appreciation for its
-On the other hand, positive tweets about Google frequently feature words like `google`  This analysis helps google and apple to understand the specific aspects that drive positive sentiment for each brand, enabling them to tailor marketing strategies and product recommendations accordingly. 
+Analyzing the most frequent words in positive tweet sentiments reveals interesting insights into customer sentiment toward Apple and Google products. For instance, words like `iPad and Google` dominate positive sentiments towards Apple, indicating a strong appreciation for its
+On the other hand, positive tweets about Google frequently feature words like `google`  This analysis helps google and Apple to understand the specific aspects that drive positive sentiment for each brand, enabling them to tailor marketing strategies and product recommendations accordingly. 
 
 ![image](https://github.com/user-attachments/assets/bdcc943c-152b-4ef9-94d4-c8b62d89ce1a)
 
@@ -197,12 +198,12 @@ On the other hand, positive tweets about Google frequently feature words like `g
 
 Negative sentiment analysis reveals frequent words like `ipad, iphone, and google` indicating customer dissatisfaction with product pricing, performance issues, and potential usability concerns for certain Apple and Google devices.
 
-## Modelling and Evauation
+## Modelling and Evaluation
 
 ### Why Binary and Multiclass Classification?
 
 #### Binary Classification
-We decided to perform binary classification to distinguish between 'Positive emotion' and 'Negative emotion.' This task simplifies the problem and focuses on detecting the polarity of sentiments, which is crucial for applications like customer feedback analysis, where identifying positive or negative sentiment can be directly actionable.
+We decided to perform binary classification to distinguish between 'Positive emotion' and 'Negative emotion.' This task simplifies the problem and focuses on detecting the polarity of sentiments, which is crucial for applications like customer feedback analysis, where identifying positive or negative sentiments can be directly actionable.
 
 #### Multiclass Classification
 We expanded to multiclass classification to include 'Neutral emotion' along with 'Positive emotion' and 'Negative emotion.' This task provides a more nuanced understanding of the sentiments expressed in the tweets, allowing for a more comprehensive sentiment analysis. This is particularly useful in social media monitoring and understanding public opinion, where not all sentiments are purely positive or negative.
@@ -217,7 +218,7 @@ We expanded to multiclass classification to include 'Neutral emotion' along with
 #### Metrics for Evaluation
 - **Accuracy**: Measures the overall correctness of the model.
 - **Precision**: The proportion of true positive predictions among all positive predictions. Important for assessing the quality of positive predictions.
-- **Recall**: The proportion of true positives correctly identified. Important for understanding the ability of the model to capture all positive instances.
+- **Recall**: The proportion of true positives correctly identified. Important to understand the ability of the model to capture all positive instances.
 - **F1-Score**: The harmonic mean of precision and recall. Provides a balance between precision and recall.
 - **ROC AUC**: Measures the model's ability to distinguish between classes. A higher AUC indicates better performance.
 
